@@ -1,4 +1,5 @@
-"""Question 1 
+"""
+Question 1 
 1. Given a Numpy array of integers as an input to the function binary(), your task is to convert
 each element in the array into its binary representation.
 """
@@ -15,9 +16,26 @@ def convert_to_binary(number):
     return str_num[::-1]
 
 
-input_Array1  = np.array([5, 10, 16, 32])
-output_array = []
-for i in input_Array1:
-    output_array.append(convert_to_binary(i))
 
+output_array = []
+
+
+def main():
+    """Function for taking input and calling helper function to convert the number into binary"""
+    
+    elements = input("Please input the number of element to convert in Binary")
+    
+    binary_list = []
+    #This loop will take input of the list element.
+    for i in range(0, int(elements)):
+        num = input("Enter decimal number :")
+        binary_list.append(num)
+    # Converting the list to numpy array.
+    input_array = np.array(binary_list)
+    # Calling the function convert to binary for conversion of number and appending it back to 
+    #list
+    for i in input_array:
+        output_array.append((convert_to_binary(int(i))))
+
+main()
 print(output_array)
