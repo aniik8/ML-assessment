@@ -1,32 +1,38 @@
 """
-You are tasked to write a program that can find the number of times a student has accessed
-a particular question
+This is a program that can find the number of times a student has accessed
+a particular question.
 """
 import numpy as np
-student_question = list([[]])
-def accessed_question(number_students):
-    """
-    This function takes student question that he/she accessed and put them into the array.
-    """
-    for i in range(0, number_students):
-        student_question.append([])
-        print(f"Enter the questions of student {i+1}")
-        for j in range(0, 11):
-            question = int(input("Please enter the Question :"))
-            if question > 10:
-                print("Please enter a valid Question number")
-                j -= 1
-            else:
-                student_question[i].append(question)
-    return student_question
 
-
-def main():
+def access_matrix(test_cases, matrix):
     """
-    This function takes the input as number of students and Send them to the function for counting.
-    Also displays the output 
+    This function takes the matrix as an input along with test_cases and calculate the number of 
+    times a particular question is accessed by a student.
     """
-    number_students = int(input("Please enter the number of students?"))
-    print(accessed_question(np.array(number_students)))
+    result_matrices = []
+    for i in range(test_cases):
+        rows, columns = matrix[i].shape
+        access_count_matrix = np.zeros((rows, 10), dtype=int)
 
-main()
+        for row in range(rows):
+            for col in range(columns):
+                question_id = matrix[i][row, col]
+                access_count_matrix[row, question_id - 1] += 1
+
+        result_matrices.append(access_count_matrix)
+
+    return result_matrices
+
+# Input
+test_case = int(input("Please enter the number of test cases"))
+matrices = []
+
+for _ in range(test_case):
+    student = int(input("Please enter the number of students"))
+    matrixs = np.array([list(map(int, input().split())) for _ in range(student)])
+    matrices.append(matrixs)
+
+# Calculate and print the result
+result = access_matrix(test_case, matrices)
+for j in range(test_case):
+    print(result[j])

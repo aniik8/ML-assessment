@@ -1,7 +1,5 @@
 """
-Question 1 
-1. Given a Numpy array of integers as an input to the function binary(), your task is to convert
-each element in the array into its binary representation.
+ 1. This program can convert each element in the array into its binary representation.
 """
 import numpy as np
 def convert_to_binary(number):
