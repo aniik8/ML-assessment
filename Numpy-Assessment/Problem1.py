@@ -5,9 +5,10 @@ each element in the array into its binary representation.
 """
 import numpy as np
 def convert_to_binary(number):
-    """This function converts the normal decimal values to the binary values. Here \
-    The loop takes a number and convert it into the binary by appending it to the string \
-    After the division. The result is returned as a string reversed.
+    """
+    1. This function converts the normal decimal values to the binary values. Here \
+    2. The loop takes a number and convert it into the binary by appending it to the string \
+    3. After the division. The result is returned as a string reversed.
     """
     str_num = ""
     while number:
@@ -21,10 +22,12 @@ output_array = []
 
 
 def main():
-    """Function for taking input and calling helper function to convert the number into binary"""
-    
-    elements = input("Please input the number of element to convert in Binary")
-    
+    """
+    Function for taking input and calling helper function to convert the 
+    number into binary
+    """
+
+    elements = input("Please input the number of element to convert in Binary")   
     binary_list = []
     #This loop will take input of the list element.
     for i in range(0, int(elements)):
