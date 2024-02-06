@@ -1,0 +1,7 @@
+- The np.clip() function is used to ensure that the pixel values of the resulting image are within the valid range of 0 to 255. 
+- Opencv imshow only works with float32 (32-bit floating point) where the range for the pixel values is 0.0-1.0 or uint8 (unsigned 8-bit) where the range is 0-255
+- Working of erosion: 
+-- A kernel a matrix of odd size(3,5,7,9, so on) is convolved with the image.
+-- A pixel in the original image (either 1 or 0) will be considered 1 only if all the pixels under the kernel are 1, otherwise, it is eroded (made to zero).
+-- Thus all the pixels near the boundary will be discarded depending upon the size of the kernel.
+-- So the thickness or size of the foreground object decreases or simply the white region decreases in the image.
