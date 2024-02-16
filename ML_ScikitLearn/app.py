@@ -26,7 +26,6 @@ def get_data():
 	keyword = request.form['keyword']
 	location = request.form['location']
 	y_pred = prediction(list((tweet, keyword, location)))
-	print(y_pred)
 	#checking if 1 is in the prediction list 
 	if 1 in y_pred:
 		return render_template("homepage.html", prediction = "Yes the tweet is related to Disaster")
@@ -43,12 +42,10 @@ indicating whether the tweet is classified as a disaster (1) or not (0).
     """
    
 	# Load the pre-trained TF-IDF vectorizer and logistic regression model
-	print(type(combined_text))
-	print(combined_text)
-	vectorizer = joblib.load('./preprocessing/tfidf_vectorizer.pkl')
-	model = joblib.load('./preprocessing/logistic_regression_model.pkl')
-	X_new = vectorizer.transform(combined_text)
-	y_pred = model.predict(X_new)
+	vectorizer = joblib.load('./preprocessing/saved_model/tfidf_vectorizer.pkl')
+	model = joblib.load('./preprocessing/saved_model/logistic_regression_model.pkl')
+	vectorized_new = vectorizer.transform(combined_text)
+	y_pred = model.predict(vectorized_new)
 	return y_pred
 
 	

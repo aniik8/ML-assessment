@@ -26,11 +26,13 @@ ML_ScikitLearn/
 │   ├── data_process.py      # Script for data preprocessing
 │   ├── text_token.py        # Script for tokenizing text data
 │   ├── training.py          # Script for model training
-│   ├── tfidf_vectorizer.pkl # Pre-trained TF-IDF vectorizer model
-│   └── logistic_regression_model.pkl # Pre-trained logistic regression model
+│   ├── saved_model/
+        └── tfidf_vectorizer.pkl # Pre-trained TF-IDF vectorizer model
+│       └── logistic_regression_model.pkl # Pre-trained logistic regression model
 │
 └── templates/                # Folder containing HTML templates for the web application
-    └── index.html           # HTML template for the home page
+    └── homepage.html           # HTML template for the home page
+    └── result.html
 ```
 
 ## Running the Flask Application
