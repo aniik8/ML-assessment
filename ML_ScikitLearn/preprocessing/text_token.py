@@ -32,7 +32,6 @@ def clean_text():
     train_data['combined_text']= train_data['combined_text'].apply(remove_stopwords)
     test_data['combined_text'] = test_data['combined_text'].apply(remove_stopwords)
     return train_data, test_data
-#df['column_name'] = df['column_name'].apply(remove_stopwords)
 
 def remove_stopwords(text):
     """
