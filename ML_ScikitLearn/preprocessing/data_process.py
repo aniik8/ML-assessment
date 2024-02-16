@@ -1,8 +1,7 @@
 """
-This particular file consist of data preprocessing process.
+This particular file consist the functionality of data preprocessing process.
 """
 import pandas as pd
-import numpy as np
 
 TRAIN_DATA_PATH = '../dataset/train.csv'
 TEST_DATA_PATH = '../dataset/test.csv'
