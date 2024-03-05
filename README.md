@@ -44,6 +44,8 @@ This folder contains files related to image processing and face detection using 
 
 ---
 
+---
+
 Machine-Learning-Journey-Assessment/
 │
 ├── Collab-Assessment1-2/
@@ -90,3 +92,4 @@ Machine-Learning-Journey-Assessment/
 │
 └── OpenCV/
     └── (Files related to image processing and face detection)
+---
