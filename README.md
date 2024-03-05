@@ -1,4 +1,4 @@
----
+
 # Machine Learning Journey Assessment
 
 This repository contains notebooks and projects completed as part of the Machine Learning Journey assessment. Below is a brief overview of the contents:
@@ -42,9 +42,7 @@ This folder contains incomplete files related to natural language processing (NL
 ## OpenCV
 This folder contains files related to image processing and face detection using OpenCV.
 
----
 
----
 
 Machine-Learning-Journey-Assessment/
 │
@@ -92,4 +90,4 @@ Machine-Learning-Journey-Assessment/
 │
 └── OpenCV/
     └── (Files related to image processing and face detection)
----
+
